@@ -13,11 +13,144 @@ html,
 body {
   font-family: 'Lato', sans-serif;
   font-size: 62.5%;
-  line-height: 1.4;
+  line-height: 1.5;
+}
+
+a,
+a:active {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* Variable */
+:root {
+  --main-clr: black;
+  --hover-clr: #ccc;
+  --header-h: 4.7rem;
 }
 
 /* App */
-#app{
-  font-size: 1.6rem;
+#app {
+  font-size: 1.5rem;
+}
+
+/*
+Tong quan => chi tiet
+Tu tren => duoi
+Tu trai => phai
+*/
+
+/* psct
+- position
+- size
+- color
+- type
+*/
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-h);
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99999999;
+}
+
+.header .nav-list {
+  display: flex;
+}
+
+.header .nav-list .nav-item {
+  position: relative;
+}
+
+.header .nav-item .nav-link {
+  display: block;
+  height: var(--header-h);
+  line-height: var(--header-h);
+  padding: 0 2.4rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.header .nav-item:hover .nav-link,
+.header .subnav-item:hover .subnav-link {
+  color: var(--main-clr);
+  background: var(--hover-clr);
+}
+
+.header .nav-item .subnav-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 16rem;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.header .nav-item:hover .subnav-list {
+  display: block;
+}
+
+.header .subnav-list .subnav-item {
+}
+
+.header .subnav-item .subnav-link {
+  display: block;
+  padding: 8px 16px;
+  color: #000;
+}
+
+.header .search-btn {
+  outline: none;
+  border: none;
+  padding: 0 2.4rem;
+  height: var(--header-h);
+  line-height: var(--header-h);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header .search-btn:hover {
+  background: #f44336;
+}
+
+/* Banner */
+.banner {
+  margin-top: var(--header-h);
+}
+
+.banner .carousel-item .carousel-caption {
+  padding: 3.2rem 0;
+  bottom: 1rem;
+}
+
+.banner .carousel-caption h3 {
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-bottom: 1.7rem;
+}
+
+.banner .carousel-caption p {
+  font-weight: border;
+  letter-spacing: 1px;
+  text-shadow: rgba(0, 0, 0, 0.8) 5px 5px 10px, rgba(0, 0, 0, 0.8) -5px -5px 10px;
+}
+
+/* Footer */
+.footer .footer-map {
+  width: 100%;
 }
 

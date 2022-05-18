@@ -2,7 +2,7 @@
 
 ## Created: 18-05-2022
 
-## Link demo: [The Band Clone](https://tran-quyen.github.io/the-band-clone1805/)
+## Link demo: [The Band Clone](https://the-band1805.netlify.app/)
 
 ## Analyst Web
 

@@ -34,6 +34,45 @@ ul {
   --header-h: 4.7rem;
 }
 
+/* Common */
+.wrapper {
+  width: 80rem;
+  padding: 7.4rem 1.6rem 11.2rem;
+  margin: 0 auto;
+}
+
+.band-title {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 3rem;
+}
+
+.band-slogan {
+  text-align: center;
+  font-style: italic;
+  margin: 1.7rem 0;
+  opacity: 0.6;
+  font-size: 1.5rem;
+}
+
+.bbtn {
+  outline: none;
+  border: none;
+  min-width: 12rem;
+  min-height: 4rem;
+  background: #000;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.bbtn:hover {
+  color: #000;
+  background: var(--hover-clr);
+}
+
 /* App */
 #app {
   font-size: 1.5rem;
@@ -149,8 +188,225 @@ Tu trai => phai
   text-shadow: rgba(0, 0, 0, 0.8) 5px 5px 10px, rgba(0, 0, 0, 0.8) -5px -5px 10px;
 }
 
+/* Main */
+.main {
+}
+/* The Band */
+.main .the-band {
+}
+
+.the-band .the-band-description {
+  text-align: justify;
+  line-height: 2.25rem;
+}
+
+.the-band .member-list {
+  margin-top: 6.2rem;
+  display: flex;
+  /* gap: 1.5rem; */
+}
+
+.the-band .member-list .member-item {
+  /*
+    max-width: 100%;
+    width: calc(100% / 3);
+  */
+  flex: 1 0 calc(100% / 3 - 1.5rem * 2);
+}
+
+/* .the-band .member-list .member-item + .member-item{
+  margin-left: 1.5rem;
+} */
+
+.the-band .member-list .member-item:not(:first-child) {
+  margin-left: 1.5rem;
+}
+
+.the-band .member-item .member-name {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.the-band .member-item .member-avatar {
+  display: block;
+  max-width: 100%;
+  width: 15.4rem;
+  margin: 0 auto;
+}
+
+/* Tour */
+.main .tour {
+  background: #000;
+}
+
+.main .tour .band-title,
+.main .tour .band-slogan {
+  color: #fff;
+}
+
+.tour .ticket-list {
+  margin: 4rem 0 3.3rem;
+  background: #fff;
+}
+
+.tour .ticket-list .ticket-item {
+  position: relative;
+  padding: 8px 16px;
+  color: #757575;
+  border-bottom: 1px solid #ccc;
+}
+
+.tour .ticket-item .ticket-sold-out {
+  display: inline-block;
+  background: #f44336;
+  color: #fff;
+  padding: 0 8px;
+  margin-left: 1.5rem;
+}
+
+.tour .ticket-item .ticket-count {
+  --count-sz: 2.5rem;
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  transform: translateY(-50%);
+
+  display: inline-block;
+  width: var(--count-sz);
+  height: var(--count-sz);
+  line-height: var(--count-sz);
+  color: #fff;
+  background: #000;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.tour .place-list {
+  max-width: 100%;
+  display: flex;
+}
+
+.tour .place-list .place-item {
+  flex: 1 0 calc(100% / 3 - 1.5rem * 2);
+}
+
+.tour .place-list .place-item:not(:first-child) {
+  margin-left: 1.5rem;
+}
+
+.tour .place-item .place-image {
+  max-width: 100%;
+}
+
+.tour .place-item .place-image:hover {
+  opacity: 0.6;
+}
+
+.tour .place-item .place-content {
+  background: #fff;
+  padding: 1.6rem;
+}
+
+.tour .place-content .place-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.tour .place-content .place-date {
+  margin: 1.8rem 0;
+  opacity: 0.6;
+}
+
+.tour .place-content .place-description {
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+/* Contact */
+.main .contact {
+}
+
+.contact .contact-content {
+  display: flex;
+}
+
+.contact .contact-content .contact-info-list {
+  flex: 1;
+  font-size: 1.8rem;
+}
+
+.contact .contact-info-list .contact-info-item {
+  margin: 1rem 0;
+}
+
+.contact .contact-info-item span {
+  margin-left: 1rem;
+}
+
+.contact .contact-info-item a {
+  color: purple;
+}
+
+.contact .contact-info-item .contact-form {
+  flex: 1;
+}
+
+.contact .contact-form .form-wrap {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.contact .form-wrap .form-input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  flex: 1;
+}
+
+.contact .form-wrap .form-input + .form-input {
+  margin-left: 1rem;
+}
+
+.contact .form-wrap:nth-child(3) {
+  justify-content: flex-end;
+}
+
 /* Footer */
 .footer .footer-map {
   width: 100%;
+  filter: grayscale(50%);
+}
+
+.footer .footer-content {
+  margin: 8rem 0;
+}
+
+.footer .footer-content .footer-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .footer-social-list .footer-social-item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.footer .footer-social-item a {
+  font-size: 3rem;
+  color: #000;
+  opacity: 0.6;
+}
+
+.footer .footer-social-item a:hover{
+  opacity: 0.4;
+}
+
+.footer .footer-content .footer-copyright {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.footer .footer-copyright .author-link {
 }
 

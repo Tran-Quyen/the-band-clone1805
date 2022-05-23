@@ -3,7 +3,7 @@ var authorLink = $('.author-link')[0];
 
 var angular = 0;
 setInterval(() => {
-  authorLink.css({
+  $(authorLink).css({
     filter: `hue-rotate(${angular}deg)`,
   });
 
@@ -52,4 +52,5 @@ $('a[href*="#"]')
       }
     }
   });
+
 

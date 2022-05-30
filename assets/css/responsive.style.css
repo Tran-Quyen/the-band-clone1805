@@ -9,11 +9,6 @@
 /* Mobile: width < 740px */
 @media screen and (max-width: 46.1875em) {
   /* Common */
-  .wrapper {
-    max-width: 100%;
-    padding: 7.4rem 1.5rem 11.2rem;
-  }
-
   .bbtn {
     width: 100%;
   }
@@ -104,7 +99,7 @@
     flex-direction: column;
   }
 
-  .contact .form-wrap .form-input + .form-input{
+  .contact .form-wrap .form-input + .form-input {
     margin-left: 0;
     margin-top: 1rem;
   }

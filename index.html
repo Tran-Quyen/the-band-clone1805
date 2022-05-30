@@ -65,6 +65,7 @@
 
     <!-- CSS custom -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.style.css" />
 
     <!-- JS custom -->
     <script src="./assets/js/main.js" defer></script>
@@ -81,7 +82,7 @@
           <li class="nav-item"><a href="#tour" class="nav-link">Tour</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
           <li class="nav-item">
-            <a href="#" class="nav-link">More <i class="fa-solid fa-caret-down"></i></a>
+            <a href="#" class="nav-link" data-toggle="subnav-list">More <i class="fa-solid fa-caret-down"></i></a>
             <ul class="subnav-list">
               <li class="subnav-item">
                 <a href="#" class="subnav-link">Merchandise</a>
@@ -97,8 +98,14 @@
         </ul>
         <!-- End: Navbar -->
 
+        <!-- Navbar PC -->
         <button class="search-btn">
           <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </button>
+
+        <!-- Navbar Mobile -->
+        <button class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
       <!-- End: Header -->

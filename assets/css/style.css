@@ -37,7 +37,7 @@ ul {
 /* Common */
 .wrapper {
   width: 80rem;
-  padding: 7.4rem 1.6rem 11.2rem;
+  padding: 7.4rem 0 11.2rem;
   margin: 0 auto;
 }
 
@@ -138,11 +138,8 @@ Tu trai => phai
   box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
 }
 
-.header .nav-item:hover .subnav-list {
+.header .subnav-list.active {
   display: block;
-}
-
-.header .subnav-list .subnav-item {
 }
 
 .header .subnav-item .subnav-link {
@@ -151,6 +148,7 @@ Tu trai => phai
   color: #000;
 }
 
+/* Navbar PC */
 .header .search-btn {
   outline: none;
   border: none;
@@ -164,6 +162,25 @@ Tu trai => phai
 
 .header .search-btn:hover {
   background: #f44336;
+}
+
+/* Navbar Mobile */
+.header .menu-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 0 2.4rem;
+  height: var(--header-h);
+}
+
+.header .menu-btn:hover {
+  color: #000;
+  background: var(--hover-clr);
 }
 
 /* Banner */
@@ -397,7 +414,7 @@ Tu trai => phai
   opacity: 0.6;
 }
 
-.footer .footer-social-item a:hover{
+.footer .footer-social-item a:hover {
   opacity: 0.4;
 }
 

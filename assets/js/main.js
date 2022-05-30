@@ -11,6 +11,20 @@ setInterval(() => {
   if (angular > 360) angular = 0;
 }, 500);
 
+// Toggle menu
+function handleToggleMenu() {
+  $('.nav-list').toggleClass('active');
+  if (!$(this).hasClass('active')) {
+    var subnavList = $('[data-toggle]')[0].dataset.toggle;
+    $(`.${subnavList}`).removeClass('active');
+  }
+}
+$('.menu-btn').on('click', handleToggleMenu);
+$('[data-toggle]').on('click', function () {
+  var subnavList = this.dataset.toggle;
+  $(`.${subnavList}`).toggleClass('active');
+});
+
 // Scrolling Smooth
 // Select all links with hashes
 $('a[href*="#"]')
@@ -18,6 +32,7 @@ $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function (event) {
+    handleToggleMenu();
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
@@ -52,5 +67,4 @@ $('a[href*="#"]')
       }
     }
   });
-
 
